@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style src="styles.css"></style>
+<script src="init.js"></script>
+</head>
+<body>
+<ul>
+<li><h1>PHP Q1</h1>
+<button name="button1" class="button">Reveal or hide answers</button>
+<p> To display 40 out of 200 characters you would do: </br>
+$string = "This is an example and not 200 characters long" </br> 
+echo substr($string,0,39);</br>
+In this case you would replace 0 with the character you want to start from and 39 the character you want to end on. </p>
+
+</li>
+<li><h2>PHP Q2</h2>
+<button name="button2" class="button" >Reveal or hide answers</button>
+<p>To remove all numbers from the string you would do: </br>
+$string = "This 89 is a54n ex9mpl3e"; </br>
+echo preg_replace("/[0-9]/", "", $string); </br>
+This replaces all numbers 0 to 9 with white space.
+</p>
+
+</li>
+<li><h3>PHP Q3</h3>
+<button name="button3" class="button" >Reveal or hide answers</button>
+<p> To replace the characters so the message is decrypted you can do: </br> 
+$message = "a r d";</br>
+$CharsOne = array("a","r","d");</br>
+$CharsTwo = array("c","m","e");</br>
+$string = str_ireplace($CharsOne,$CharsTwo,$message);</br>
+echo $message;</br>
+</br>
+This puts the new letters inplace of the old letters.
+</p>
+
+</li>
+<li><h4>PHP Q4</h4>
+<button name="button4" class="button">Reveal or hide answers</button>
+<p>To get the domain of the url you would do: </br> 
+$url = "example of url here";</br>
+var_dump(parse_url($url, PHP_URL_HOST));
+</p>
+
+</li>
+<li><h5>Q5 PHP</h5>
+<button name="button5" class="button">Reveal or hide answers</button>
+<p>To get the name and value of the parameters you should: </br>
+$url = "example of url here";</br>
+$url_parts = parse_url($url);</br>
+parse_str($url_parts['query'], $params); </br>
+echo  'Your name is'.$params['name'].'. Your age is'.$params['age'];</br>
+</p>
+
+</li>
+</ul>
+
+</body>
+
+</html>
